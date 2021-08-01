@@ -1,4 +1,4 @@
-###### Fronted stuff is kept to minimum as I'm currently learning it and want to do it completely by myself when possible.
+#### Fronted stuff is kept to minimum as I'm currently learning it and want to do it completely by myself when possible.
 
 
 
