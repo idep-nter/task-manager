@@ -1,4 +1,4 @@
-Very basic TO-DO app with user registration.
+Very simple TO-DO app with user registration.
 
 Once you register you automatically log in and you can start making tasks you want to do.
 
