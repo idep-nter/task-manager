@@ -1,0 +1,12 @@
+{% extends "manager/base.html" %}
+
+{% block title %}New Task{% endblock %}
+
+{% block content %}
+  <h1>Add a new task:</h1>
+  <form action="{% url 'manager:new_task' %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Add task</button>
+  </form>
+{% endblock content %}

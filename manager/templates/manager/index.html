@@ -1,0 +1,10 @@
+{% extends "manager/base.html" %}
+
+{% block title %}Task Manager{% endblock %}
+
+{% block content %}
+    <h1>Task manager</h1>
+    {% for user in users %}
+        <a href="{% url 'users:login'%}">{{ user }}</a>
+    {% endfor %}
+{% endblock content %}

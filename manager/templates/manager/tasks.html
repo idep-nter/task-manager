@@ -1,0 +1,25 @@
+{% extends "manager/base.html" %}
+
+{% block title %}Your Tasks{% endblock %}
+
+{% block content %}
+  <h1>Tasks</h1>
+  <hr>
+  {% for task in tasks %}
+    <div>
+      {% if task.complete %}
+        <h3><strike>{{ task.title }}</strike></h3>
+        <p><strike>{{ task.description }}</strike></p>
+      {% else %}
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+      {% endif %}
+      <a href="{% url 'manager:update_task' task.id %}">Update</a>
+      <a href="{% url 'manager:delete_task' task.id %}">Delete</a>
+      <hr>
+    </div>
+  {% empty %}
+    <li>No tasks have been added yet.</li>
+  {% endfor %}
+    <a href="{% url 'manager:new_task' %}">Add a new task</a>
+{% endblock content %}

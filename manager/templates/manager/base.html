@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <a href="{% url 'manager:index' %}">Task Manager</a> -
+    <a href="{% url 'manager:tasks' %}">Tasks</a> -
+    {% if user.is_authenticated %}
+        {{ user.username }}
+        - <a href="{% url 'users:logout' %}">Log out</a>
+    {% else %}
+        <a href="{% url 'users:register' %}">Register</a> -
+        <a href="{% url 'users:login' %}">Log in</a>
+    {% endif %}
+</head>
+<body>
+    {% block content %}{% endblock content %}
+</body>
+</html>
