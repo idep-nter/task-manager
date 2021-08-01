@@ -5,4 +5,4 @@ Once you register you automatically log in and you can start making tasks you wa
 Every task can be updated, deleted or marked as completed.
 
 
-### Fronted stuff is kept to minimum as I'm currently learning it and want to do it completely by myself when possible.
+### The amount of frontend code is kept to bare minimum as I'm currently in a process of learning it and want to do it completely by myself when possible.
