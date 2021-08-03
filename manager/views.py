@@ -24,8 +24,7 @@ class TasksView(ListView):
 
     def get_queryset(self):
         base_query = super().get_queryset()
-        data = base_query.filter(owner=self.request.user).order_by('complete',
-                                                                   'date_added')
+        data = base_query.filter(owner=self.request.user).order_by('date_added')
         return data
 
 
