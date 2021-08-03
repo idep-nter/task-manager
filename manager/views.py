@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.views.generic import TemplateView, ListView, FormView,UpdateView, DeleteView
+from django.views.generic import TemplateView, ListView, FormView, UpdateView, DeleteView
 from django.utils.decorators import method_decorator
 
 from .models import Task, User
@@ -24,7 +24,8 @@ class TasksView(ListView):
 
     def get_queryset(self):
         base_query = super().get_queryset()
-        data = base_query.filter(owner=self.request.user).order_by('date_added')
+        data = base_query.filter(owner=self.request.user).order_by('complete',
+                                                                   'date_added')
         return data
 
 
